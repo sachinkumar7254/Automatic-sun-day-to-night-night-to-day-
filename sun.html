@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background-color: antiquewhite; */
+            animation: dayTonight 10s infinite 1.5s
+        
+        }
+        .content{
+            position: absolute;
+            top: 10%;
+            left: 40%;
+            bottom: 30%;
+            transform: translate(-80,-80);
+            display: block;
+            margin-bottom: 50%;
+        }
+        .sun{
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            background-color:  #f8d40a;
+            border:3px #f8d40a;
+            overflow: hidden;
+            animation: dayToNight 10s infinite 1.5s;
+        }
+        .shadow{
+            height: 520px;
+            width:520px;
+            border-radius: 50%;
+            top: -5px;
+            left:0px;
+            animation: moveshadow 10s infinite 1.5s;
+
+        }
+        @keyframes moveshadow {
+            0%{
+                transform: translateX(-500px);
+                background-color: rgb(227, 124, 124);
+            }
+            50%{
+                transform: translateX(-15px);
+                background-color: yellow(238, 232, 232);
+            }
+            100%
+            {
+                transform: translateX(-520px);
+                background-color: black;
+            }
+        }
+        @keyframes dayToNight{
+            10%{
+                background-color: (rgb(4, 4, 4));
+            }
+                50%{
+                    background-color: black;
+                }
+                100%{
+                    background-color:  #f8d40a;
+                }
+        }
+        @keyframes NightToday{
+            10%{
+                background-color: (#fcf9f9);
+            }
+                50%{
+                    background-color: black;
+                }
+                100%{
+                    background-color: #fef20f;
+                }
+        }
+    </style>
+</head>
+<body><center>
+    <h1>Automatic sun</h1>
+
+    <div class="content">
+        <div class="sun">
+            <div class="shadow">
+                
+            </div>
+        </div>
+        
+    </div>
+</center>
+
+    
+</body>
+</html>
